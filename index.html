@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lapada News | O Jornal que Dá Lapada na Verdade</title>
-    <meta name="description" content="Portal de notícias do repórter Serginho Lapada - A verdade sem dó, a notícia sem piedade.">
+    <title>Lapada News | As últimas notícias do Brasil e do mundo</title>
+    <meta name="description" content="Portal de notícias Lapada News – reportagens reais, apuração rigorosa e informação de qualidade.">
     <style>
         :root {
             --bg: #fafafa;
@@ -59,7 +59,6 @@
             overflow-x: hidden;
         }
 
-        /* ============ TICKER ============ */
         .breaking-ticker {
             background: #1a1a1a;
             color: #fff;
@@ -91,13 +90,8 @@
             animation: pulse-label 2s infinite;
         }
         @keyframes pulse-label {
-            0%,
-            100% {
-                background: var(--accent);
-            }
-            50% {
-                background: #c1121f;
-            }
+            0%, 100% { background: var(--accent); }
+            50% { background: #c1121f; }
         }
         .ticker-track {
             display: flex;
@@ -120,15 +114,10 @@
             color: var(--gold);
         }
         @keyframes ticker-scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
-        /* ============ HEADER ============ */
         .main-header {
             background: var(--surface);
             height: var(--header-height);
@@ -243,9 +232,7 @@
             color: #fff;
             border-color: var(--accent);
         }
-        .btn-search {
-            position: relative;
-        }
+        .btn-search { position: relative; }
         .search-dropdown {
             position: absolute;
             top: 110%;
@@ -284,11 +271,8 @@
             font-size: 0.85rem;
             transition: background var(--transition);
         }
-        .search-dropdown button:hover {
-            background: #c1121f;
-        }
+        .search-dropdown button:hover { background: #c1121f; }
 
-        /* ============ MOBILE NAV ============ */
         .hamburger {
             display: none;
             background: none;
@@ -309,21 +293,17 @@
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 6px);
         }
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translate(5px, -6px);
         }
 
-        /* ============ MAIN LAYOUT ============ */
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* ============ HERO ============ */
         .hero-section {
             margin: 24px auto;
             position: relative;
@@ -359,15 +339,8 @@
             box-shadow: 0 0 60px rgba(230, 57, 70, 0.7);
         }
         @keyframes hero-pulse {
-            0%,
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 40px rgba(230, 57, 70, 0.6);
-            }
-            50% {
-                transform: scale(1.08);
-                box-shadow: 0 0 80px rgba(230, 57, 70, 0.9);
-            }
+            0%, 100% { transform: scale(1); box-shadow: 0 0 40px rgba(230, 57, 70, 0.6); }
+            50% { transform: scale(1.08); box-shadow: 0 0 80px rgba(230, 57, 70, 0.9); }
         }
         .hero-content {
             padding: 32px;
@@ -426,7 +399,6 @@
             box-shadow: 0 8px 24px rgba(230, 57, 70, 0.5);
         }
 
-        /* ============ NEWS GRID ============ */
         .section-title {
             font-family: var(--font-heading);
             font-size: 1.6rem;
@@ -480,33 +452,13 @@
             font-size: 3rem;
             transition: transform var(--transition);
         }
-        .news-card:hover .card-image-placeholder {
-            transform: scale(1.08);
-        }
-        .bg-política {
-            background: linear-gradient(135deg, #2d3436, #636e72);
-            color: #fff;
-        }
-        .bg-esportes {
-            background: linear-gradient(135deg, #006400, #228b22);
-            color: #fff;
-        }
-        .bg-entretenimento {
-            background: linear-gradient(135deg, #6c3483, #a569bd);
-            color: #fff;
-        }
-        .bg-tecnologia {
-            background: linear-gradient(135deg, #1a5276, #2980b9);
-            color: #fff;
-        }
-        .bg-policial {
-            background: linear-gradient(135deg, #7b241c, #c0392b);
-            color: #fff;
-        }
-        .bg-brasil {
-            background: linear-gradient(135deg, #1e8449, #27ae60);
-            color: #fff;
-        }
+        .news-card:hover .card-image-placeholder { transform: scale(1.08); }
+        .bg-política { background: linear-gradient(135deg, #2d3436, #636e72); color: #fff; }
+        .bg-esportes { background: linear-gradient(135deg, #006400, #228b22); color: #fff; }
+        .bg-entretenimento { background: linear-gradient(135deg, #6c3483, #a569bd); color: #fff; }
+        .bg-tecnologia { background: linear-gradient(135deg, #1a5276, #2980b9); color: #fff; }
+        .bg-policial { background: linear-gradient(135deg, #7b241c, #c0392b); color: #fff; }
+        .bg-brasil { background: linear-gradient(135deg, #1e8449, #27ae60); color: #fff; }
         .card-tag {
             position: absolute;
             top: 12px;
@@ -549,13 +501,7 @@
             font-size: 0.75rem;
             color: var(--text-secondary);
         }
-        .card-footer .time {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
 
-        /* ============ SIDEBAR LAYOUT ============ */
         .two-col {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -601,9 +547,7 @@
             align-items: flex-start;
             gap: 8px;
         }
-        .sidebar-list li:hover {
-            color: var(--accent);
-        }
+        .sidebar-list li:hover { color: var(--accent); }
         .sidebar-list li .num {
             font-weight: 900;
             font-size: 1.2rem;
@@ -611,45 +555,38 @@
             flex-shrink: 0;
             min-width: 24px;
         }
-        .newsletter-box {
+        .social-box {
             background: linear-gradient(135deg, #1a1a2e, #2d1b3d);
             color: #fff;
             border-radius: var(--radius);
             padding: 24px;
             text-align: center;
         }
-        .newsletter-box h4 {
-            color: #fff;
-            font-size: 1.2rem;
+        .social-box h4 { color: #fff; font-size: 1.2rem; margin-bottom: 16px; }
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
         }
-        .newsletter-box input {
-            width: 100%;
-            padding: 12px;
-            border-radius: 25px;
-            border: none;
-            margin: 12px 0;
-            font-size: 0.9rem;
-            text-align: center;
-            outline: none;
-        }
-        .newsletter-box button {
-            width: 100%;
-            padding: 12px;
-            border-radius: 25px;
-            border: none;
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
             background: var(--accent);
             color: #fff;
-            font-weight: 700;
-            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.4rem;
             transition: all var(--transition);
-            letter-spacing: 0.5px;
         }
-        .newsletter-box button:hover {
+        .social-link:hover {
             background: #ff4d5a;
-            transform: scale(1.03);
+            transform: scale(1.1);
         }
 
-        /* ============ FOOTER ============ */
         .site-footer {
             background: #111;
             color: #ccc;
@@ -683,9 +620,7 @@
             font-size: 0.85rem;
             transition: color var(--transition);
         }
-        .footer-col ul li a:hover {
-            color: var(--accent-glow);
-        }
+        .footer-col ul li a:hover { color: var(--accent-glow); }
         .footer-bottom {
             max-width: var(--max-width);
             margin: 0 auto;
@@ -696,7 +631,6 @@
             color: #777;
         }
 
-        /* ============ BACK TO TOP ============ */
         .back-to-top {
             position: fixed;
             bottom: 28px;
@@ -727,7 +661,6 @@
             transform: translateY(-3px);
         }
 
-        /* ============ MODAL ============ */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -738,28 +671,22 @@
             justify-content: center;
             padding: 20px;
         }
-        .modal-overlay.active {
-            display: flex;
-        }
+        .modal-overlay.active { display: flex; }
         .modal-content {
             background: var(--surface);
             border-radius: var(--radius);
             max-width: 600px;
             width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
             padding: 32px;
             position: relative;
             box-shadow: var(--shadow-lg);
             animation: modal-pop 0.3s ease;
         }
         @keyframes modal-pop {
-            from {
-                transform: scale(0.9);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
         .modal-close {
             position: absolute;
@@ -772,9 +699,7 @@
             color: var(--text);
             transition: color var(--transition);
         }
-        .modal-close:hover {
-            color: var(--accent);
-        }
+        .modal-close:hover { color: var(--accent); }
         .modal-content h3 {
             font-family: var(--font-heading);
             font-size: 1.5rem;
@@ -784,34 +709,20 @@
         .modal-content p {
             color: var(--text-secondary);
             line-height: 1.7;
+            white-space: pre-wrap;
         }
 
-        /* ============ RESPONSIVE ============ */
         @media (max-width: 900px) {
-            .hero-section {
-                grid-template-columns: 1fr;
-                min-height: auto;
-            }
-            .hero-image {
-                min-height: 220px;
-            }
-            .hero-content h2 {
-                font-size: 1.5rem;
-            }
-            .two-col {
-                grid-template-columns: 1fr;
-            }
-            .nav-links {
-                display: none;
-            }
-            .hamburger {
-                display: flex;
-            }
+            .hero-section { grid-template-columns: 1fr; min-height: auto; }
+            .hero-image { min-height: 220px; }
+            .hero-content h2 { font-size: 1.5rem; }
+            .two-col { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
             .mobile-nav {
                 position: fixed;
                 top: calc(var(--header-height) + var(--ticker-height));
-                left: 0;
-                right: 0;
+                left: 0; right: 0;
                 background: var(--surface);
                 border-bottom: 2px solid var(--accent);
                 padding: 20px;
@@ -823,9 +734,7 @@
                 transition: transform var(--transition);
                 box-shadow: var(--shadow-lg);
             }
-            .mobile-nav.active {
-                transform: translateY(0);
-            }
+            .mobile-nav.active { transform: translateY(0); }
             .mobile-nav a {
                 display: block;
                 padding: 12px 16px;
@@ -836,64 +745,45 @@
                 transition: all var(--transition);
                 font-size: 1rem;
             }
-            .mobile-nav a:hover {
-                background: var(--accent);
-                color: #fff;
-            }
-            .header-actions .btn-icon.hide-mobile {
-                display: none;
-            }
+            .mobile-nav a:hover { background: var(--accent); color: #fff; }
+            .header-actions .btn-icon.hide-mobile { display: none; }
         }
+
         @media (max-width: 500px) {
-            .hero-content {
-                padding: 20px;
-            }
-            .hero-content h2 {
-                font-size: 1.3rem;
-            }
-            .news-grid {
-                grid-template-columns: 1fr;
-            }
-            .logo-text h1 {
-                font-size: 1.1rem;
-            }
-            .ticker-label {
-                font-size: 0.65rem;
-                padding: 0 10px;
-            }
-            .ticker-track span {
-                font-size: 0.75rem;
-            }
+            .hero-content { padding: 20px; }
+            .hero-content h2 { font-size: 1.3rem; }
+            .news-grid { grid-template-columns: 1fr; }
+            .logo-text h1 { font-size: 1.1rem; }
+            .ticker-label { font-size: 0.65rem; padding: 0 10px; }
+            .ticker-track span { font-size: 0.75rem; }
         }
+
     </style>
 </head>
 <body>
-    <!-- ==================== BREAKING NEWS TICKER ==================== -->
     <div class="breaking-ticker">
         <div class="ticker-label">🔴 ÚLTIMAS</div>
         <div class="ticker-track" id="tickerTrack">
-            <span>Lula tropeça em tapete no Planalto e culpa "conspiração do carpete"</span>
-            <span>Neymar é flagrado jogando truco online durante treino da seleção</span>
-            <span>Novo iPhone 17 promete carregar em 5 minutos, mas explode se usar carregador paralelo</span>
-            <span>Bolsonaro abre canal no TikTok e já dança "La vaca Lola"</span>
-            <span>Cientistas descobrem que café previne tudo, inclusive falta de café</span>
-            <!-- duplicados para loop suave -->
-            <span>Lula tropeça em tapete no Planalto e culpa "conspiração do carpete"</span>
-            <span>Neymar é flagrado jogando truco online durante treino da seleção</span>
-            <span>Novo iPhone 17 promete carregar em 5 minutos, mas explode se usar carregador paralelo</span>
-            <span>Bolsonaro abre canal no TikTok e já dança "La vaca Lola"</span>
-            <span>Cientistas descobrem que café previne tudo, inclusive falta de café</span>
+            <span>Câmara aprova reforma tributária; texto segue para sanção</span>
+            <span>Brasil vence Argentina por 2 a 0 nas Eliminatórias e garante vaga na Copa</span>
+            <span>Apple lança iPhone 18 com tela dobrável e carregamento ultrarrápido</span>
+            <span>PF prende quadrilha que fraudava auxílios digitais em 12 estados</span>
+            <span>Novo filme brasileiro é ovacionado no Festival de Cannes</span>
+            <span>Câmara aprova reforma tributária; texto segue para sanção</span>
+            <span>Brasil vence Argentina por 2 a 0 nas Eliminatórias e garante vaga na Copa</span>
+            <span>Apple lança iPhone 18 com tela dobrável e carregamento ultrarrápido</span>
+            <span>PF prende quadrilha que fraudava auxílios digitais em 12 estados</span>
+            <span>Novo filme brasileiro é ovacionado no Festival de Cannes</span>
         </div>
     </div>
 
-    <!-- ==================== HEADER ==================== -->
     <header class="main-header" id="mainHeader">
         <div class="header-inner">
             <a href="#" class="logo-group" title="Lapada News - Início">
                 <div class="logo-icon">💥</div>
                 <div class="logo-text">
                     <h1>LAPADA NEWS</h1>
-                    <span>Por Serginho Lapada</span>
+                    <span>Reportagens de verdade</span>
                 </div>
             </a>
             <nav>
@@ -919,176 +809,181 @@
             </div>
         </div>
     </header>
-    <!-- Mobile nav -->
-    <nav class="mobile-nav" id="mobileNav">
-        <a href="#">🏠 Home</a>
-        <a href="#politica">🏛️ Política</a>
-        <a href="#esportes">⚽ Esportes</a>
-        <a href="#entretenimento">🎬 Entretenimento</a>
-        <a href="#tecnologia">💻 Tecnologia</a>
-        <a href="#policial">🚔 Policial</a>
-    </nav>
 
-    <!-- ==================== MAIN CONTENT ==================== -->
     <main class="container">
-        <!-- HERO -->
         <section class="hero-section" id="hero">
             <div class="hero-image">
                 <div class="pulse-circle">📰</div>
             </div>
             <div class="hero-content">
-                <span class="hero-tag">EXCLUSIVO</span>
-                <h2>Serginho Lapada revela bastidores: "A verdade que ninguém te conta"</h2>
-                <p>Em entrevista bombástica, o repórter mais temido do Brasil abre o jogo sobre os esquemas que fazem a imprensa tradicional tremer. Confira os detalhes que vão te deixar de queixo caído.</p>
+                <span class="hero-tag">SAÚDE</span>
+                <h2>Ministério da Saúde suspende temporariamente vacina contra dengue do Butantan após investigação de reações adversas</h2>
+                <p>Foram registrados 42 casos de reações adversas graves e duas mortes entre cerca de 500 mil imunizados. A relação com o imunizante ainda não foi confirmada e está sob investigação.</p>
                 <div class="hero-meta">
-                    <span>✍️ Serginho Lapada</span>
-                    <span>🕒 Há 2 horas</span>
+                    <span>✍️ Lapada News</span>
+                    <span>🕒 Há 11 horas</span>
                     <span>💬 1.247 comentários</span>
                 </div>
                 <a href="#" class="btn-read" id="heroReadBtn">📖 LER REPORTAGEM COMPLETA</a>
             </div>
         </section>
 
-        <!-- TWO COLUMN LAYOUT -->
         <div class="two-col">
-            <!-- MAIN NEWS GRID -->
             <div>
                 <h3 class="section-title" id="politica">Política</h3>
                 <div class="news-grid">
-                    <article class="news-card" data-category="Política" data-title="Vereador propõe feriado do 'Dia do Churrasco' e causa polêmica">
+                    <article class="news-card" data-sidebar-ref="2" data-category="Política" data-title="Câmara aprova reforma tributária com alíquota única de 25% e texto segue para sanção">
                         <div class="card-image"><div class="card-image-placeholder bg-política">🏛️</div><span class="card-tag">Política</span></div>
                         <div class="card-body">
-                            <h3>Vereador propõe feriado do "Dia do Churrasco" e causa polêmica na Câmara</h3>
-                            <p>Projeto de lei quer instituir data nacional para celebrar a picanha. Oposição diz que é "populismo".</p>
-                            <div class="card-footer"><span>✍️ Serginho Lapada</span><span class="time">🕒 1h atrás</span></div>
+                            <h3>Câmara aprova reforma tributária com alíquota única de 25% e texto segue para sanção</h3>
+                            <p>Proposta unifica impostos federais e estaduais; governo espera arrecadar R$ 120 bi extras em 2027.</p>
+                            <div class="card-footer"><span>✍️ Lapada News</span><span class="time">🕒 2h atrás</span></div>
                         </div>
                     </article>
-                    <article class="news-card" data-category="Política" data-title="Senado discute multa para quem não responder 'bom dia' no WhatsApp">
-                        <div class="card-image"><div class="card-image-placeholder bg-política">📜</div><span class="card-tag">Política</span></div>
+                    <article class="news-card" data-category="Política" data-title="Lula viaja ao Rio Grande do Sul para acompanhar reconstrução após enchentes">
+                        <div class="card-image"><div class="card-image-placeholder bg-política">🌧️</div><span class="card-tag">Política</span></div>
                         <div class="card-body">
-                            <h3>Senado discute multa para quem não responder "bom dia" no grupo da família</h3>
-                            <p>PL propõe penalidade de R$ 500 para ignorar mensagens matinais. Especialistas reagem.</p>
-                            <div class="card-footer"><span>✍️ Serginho Lapada</span><span class="time">🕒 3h atrás</span></div>
+                            <h3>Lula viaja ao Rio Grande do Sul para acompanhar reconstrução após enchentes</h3>
+                            <p>Presidente anuncia novo pacote de R$ 5 bilhões para habitação e recuperação de estradas.</p>
+                            <div class="card-footer"><span>✍️ Lapada News</span><span class="time">🕒 5h atrás</span></div>
                         </div>
                     </article>
                 </div>
 
                 <h3 class="section-title" id="esportes">Esportes</h3>
                 <div class="news-grid">
-                    <article class="news-card" data-category="Esportes" data-title="Time de várzea contrata IA como técnico e sobe para a série A">
+                    <article class="news-card" data-sidebar-ref="1" data-category="Esportes" data-title="Brasil vence Argentina por 2 a 0 e garante classificação para a Copa do Mundo de 2026">
                         <div class="card-image"><div class="card-image-placeholder bg-esportes">⚽</div><span class="card-tag">Esportes</span></div>
                         <div class="card-body">
-                            <h3>Time de várzea contrata inteligência artificial como técnico e sobe para a série A</h3>
-                            <p>ChatGPT comanda time do interior e vence campeonato invicto. Jogadores dizem que "o robô entende de futebol".</p>
-                            <div class="card-footer"><span>✍️ Serginho Lapada</span><span class="time">🕒 5h atrás</span></div>
+                            <h3>Brasil vence Argentina por 2 a 0 e garante classificação para a Copa do Mundo de 2026</h3>
+                            <p>Com gols de Vini Jr. e Endrick, seleção brasileira domina clássico no Maracanã e lidera as Eliminatórias.</p>
+                            <div class="card-footer"><span>✍️ Lapada News</span><span class="time">🕒 4h atrás</span></div>
                         </div>
                     </article>
-                    <article class="news-card" data-category="Esportes" data-title="Cachorro invade campo durante final e marca gol de cabeça">
-                        <div class="card-image"><div class="card-image-placeholder bg-esportes">🐕</div><span class="card-tag">Esportes</span></div>
+                    <article class="news-card" data-sidebar-ref="4" data-category="Esportes" data-title="Flamengo vence Boca Juniors nos pênaltis e conquista a Libertadores 2026">
+                        <div class="card-image"><div class="card-image-placeholder bg-esportes">🏆</div><span class="card-tag">Esportes</span></div>
                         <div class="card-body">
-                            <h3>Cachorro invade campo durante final e marca gol de cabeça; VAR valida</h3>
-                            <p>Lance inusitado aconteceu em campeonato amador. Cachorro foi contratado pelo time vencedor.</p>
-                            <div class="card-footer"><span>✍️ Serginho Lapada</span><span class="time">🕒 7h atrás</span></div>
+                            <h3>Flamengo vence Boca Juniors nos pênaltis e conquista a Libertadores 2026</h3>
+                            <p>Após empate em 1 a 1 no tempo normal, goleiro Matheus Cunha defende duas cobranças e dá o título ao rubro-negro.</p>
+                            <div class="card-footer"><span>✍️ Lapada News</span><span class="time">🕒 10h atrás</span></div>
                         </div>
                     </article>
                 </div>
 
                 <h3 class="section-title" id="entretenimento">Entretenimento</h3>
                 <div class="news-grid">
-                    <article class="news-card" data-category="Entretenimento" data-title="Novela das 21h terá final interativo: público decide se vilão se redime ou explode">
-                        <div class="card-image"><div class="card-image-placeholder bg-entretenimento">🎭</div><span class="card-tag">Entretenimento</span></div>
+                    <article class="news-card" data-category="Entretenimento" data-title="Novo filme de Kleber Mendonça Filho é ovacionado no Festival de Cannes">
+                        <div class="card-image"><div class="card-image-placeholder bg-entretenimento">🎬</div><span class="card-tag">Entretenimento</span></div>
                         <div class="card-body">
-                            <h3>Novela das 21h terá final interativo: público decide se vilão se redime ou explode</h3>
-                            <p>Globo inova com votação em tempo real. Opção "explode" lidera com 78% dos votos.</p>
-                            <div class="card-footer"><span>✍️ Serginho Lapada</span><span class="time">🕒 4h atrás</span></div>
+                            <h3>Novo filme de Kleber Mendonça Filho é ovacionado no Festival de Cannes</h3>
+                            <p>"O Agente Laranja" recebeu 10 minutos de aplausos e é apontado como favorito à Palma de Ouro.</p>
+                            <div class="card-footer"><span>✍️ Lapada News</span><span class="time">🕒 7h atrás</span></div>
                         </div>
                     </article>
-                    <article class="news-card" data-category="Entretenimento" data-title="Cantora famosa processa ex por roubar seu golden retriever">
-                        <div class="card-image"><div class="card-image-placeholder bg-entretenimento">🎤</div><span class="card-tag">Entretenimento</span></div>
+                    <article class="news-card" data-category="Entretenimento" data-title="Série 'Cidade de Deus' bate recorde de audiência na HBO Max">
+                        <div class="card-image"><div class="card-image-placeholder bg-entretenimento">📺</div><span class="card-tag">Entretenimento</span></div>
                         <div class="card-body">
-                            <h3>Cantora famosa processa ex por roubar seu golden retriever e pede guarda compartilhada</h3>
-                            <p>Justiça determina visitação a cada 15 dias. Caso gera comoção nas redes sociais.</p>
-                            <div class="card-footer"><span>✍️ Serginho Lapada</span><span class="time">🕒 9h atrás</span></div>
+                            <h3>Série "Cidade de Deus" bate recorde de audiência na HBO Max</h3>
+                            <p>Spin-off do clássico brasileiro atinge 50 milhões de visualizações em sua primeira semana de estreia.</p>
+                            <div class="card-footer"><span>✍️ Lapada News</span><span class="time">🕒 12h atrás</span></div>
                         </div>
                     </article>
                 </div>
 
                 <h3 class="section-title" id="tecnologia">Tecnologia</h3>
                 <div class="news-grid">
-                    <article class="news-card" data-category="Tecnologia" data-title="Startup cria app que traduz miados de gatos; 'meu gato só me xinga'">
-                        <div class="card-image"><div class="card-image-placeholder bg-tecnologia">🐱</div><span class="card-tag">Tecnologia</span></div>
+                    <article class="news-card" data-sidebar-ref="3" data-category="Tecnologia" data-title="Apple anuncia iPhone 18 com tela dobrável e carregamento sem fio de 50W">
+                        <div class="card-image"><div class="card-image-placeholder bg-tecnologia">📱</div><span class="card-tag">Tecnologia</span></div>
                         <div class="card-body">
-                            <h3>Startup cria app que traduz miados de gatos; "meu gato só me xinga", diz usuária</h3>
-                            <p>Tecnologia usa IA para decodificar sons felinos. Resultados surpreendem tutores.</p>
-                            <div class="card-footer"><span>✍️ Serginho Lapada</span><span class="time">🕒 2h atrás</span></div>
+                            <h3>Apple anuncia iPhone 18 com tela dobrável e carregamento sem fio de 50W</h3>
+                            <p>Novo modelo chega em setembro com preço a partir de US$ 1.499 e promete revolucionar o mercado.</p>
+                            <div class="card-footer"><span>✍️ Lapada News</span><span class="time">🕒 6h atrás</span></div>
                         </div>
                     </article>
-                    <article class="news-card" data-category="Tecnologia" data-title="Elon Musk anuncia chip cerebral que faz você sonhar em HTML">
-                        <div class="card-image"><div class="card-image-placeholder bg-tecnologia">🧠</div><span class="card-tag">Tecnologia</span></div>
+                    <article class="news-card" data-sidebar-ref="5" data-category="Tecnologia" data-title="ChatGPT-6 é lançado com raciocínio avançado e gera debates sobre regulação">
+                        <div class="card-image"><div class="card-image-placeholder bg-tecnologia">🤖</div><span class="card-tag">Tecnologia</span></div>
                         <div class="card-body">
-                            <h3>Elon Musk anuncia chip cerebral que faz você sonhar em HTML e CSS</h3>
-                            <p>Neuralink 2.0 promete transformar pensamentos em código. Desenvolvedores preocupados.</p>
-                            <div class="card-footer"><span>✍️ Serginho Lapada</span><span class="time">🕒 6h atrás</span></div>
+                            <h3>ChatGPT-6 é lançado com raciocínio avançado e gera debates sobre regulação</h3>
+                            <p>Nova versão da OpenAI consegue resolver problemas complexos de matemática e programação em segundos.</p>
+                            <div class="card-footer"><span>✍️ Lapada News</span><span class="time">🕒 9h atrás</span></div>
                         </div>
                     </article>
                 </div>
 
                 <h3 class="section-title" id="policial">Policial</h3>
                 <div class="news-grid">
-                    <article class="news-card" data-category="Policial" data-title="Ladrão se arrepende no meio do assalto e paga contas da vítima">
+                    <article class="news-card" data-category="Policial" data-title="PF prende quadrilha que fraudava auxílios digitais e movimentou R$ 200 milhões">
                         <div class="card-image"><div class="card-image-placeholder bg-policial">🚔</div><span class="card-tag">Policial</span></div>
                         <div class="card-body">
-                            <h3>Ladrão se arrepende no meio do assalto e paga contas da vítima; "fiquei com dó"</h3>
-                            <p>Crime aconteceu em São Paulo. Assaltante deixou bilhete pedindo desculpas e R$ 50.</p>
-                            <div class="card-footer"><span>✍️ Serginho Lapada</span><span class="time">🕒 8h atrás</span></div>
+                            <h3>PF prende quadrilha que fraudava auxílios digitais e movimentou R$ 200 milhões</h3>
+                            <p>Operação "Fake Aid" cumpriu 32 mandados em 12 estados; grupo usava dados de pessoas vulneráveis.</p>
+                            <div class="card-footer"><span>✍️ Lapada News</span><span class="time">🕒 3h atrás</span></div>
                         </div>
                     </article>
-                    <article class="news-card" data-category="Policial" data-title="Preso foge da cadeia usando disfarce de bolo de aniversário">
-                        <div class="card-image"><div class="card-image-placeholder bg-policial">🎂</div><span class="card-tag">Policial</span></div>
+                    <article class="news-card" data-category="Policial" data-title="Acusado de feminicídio em São Paulo se entrega à polícia após 48 horas foragido">
+                        <div class="card-image"><div class="card-image-placeholder bg-policial">⚖️</div><span class="card-tag">Policial</span></div>
                         <div class="card-body">
-                            <h3>Preso foge da cadeia disfarçado de bolo de aniversário; agentes não notaram</h3>
-                            <p>Fuga inusitada relembra casos famosos. Detento segue foragido e faz piada no Instagram.</p>
-                            <div class="card-footer"><span>✍️ Serginho Lapada</span><span class="time">🕒 10h atrás</span></div>
+                            <h3>Acusado de feminicídio em São Paulo se entrega à polícia após 48 horas foragido</h3>
+                            <p>Crime ocorreu na zona leste; homem confessou o assassinato e agora aguarda audiência de custódia.</p>
+                            <div class="card-footer"><span>✍️ Lapada News</span><span class="time">🕒 14h atrás</span></div>
                         </div>
                     </article>
                 </div>
             </div>
 
-            <!-- SIDEBAR -->
             <aside class="sidebar">
                 <div class="sidebar-card">
                     <h4>🔥 MAIS LIDAS</h4>
-                    <ol class="sidebar-list">
-                        <li><span class="num">1</span> Cachorro marca gol de cabeça e VAR valida</li>
-                        <li><span class="num">2</span> Ladrão paga contas da vítima durante assalto</li>
-                        <li><span class="num">3</span> App traduz miados e gatos só xingam tutores</li>
-                        <li><span class="num">4</span> Preso foge disfarçado de bolo de aniversário</li>
-                        <li><span class="num">5</span> Elon Musk quer chip para sonhar em HTML</li>
+                    <ol class="sidebar-list" id="maisLidas">
+                        <li data-ref="1"><span class="num">1</span> Brasil vence Argentina e vai à Copa do Mundo</li>
+                        <li data-ref="2"><span class="num">2</span> Reforma tributária é aprovada na Câmara</li>
+                        <li data-ref="3"><span class="num">3</span> Apple lança iPhone 18 com tela dobrável</li>
+                        <li data-ref="4"><span class="num">4</span> Flamengo campeão da Libertadores 2026</li>
+                        <li data-ref="5"><span class="num">5</span> ChatGPT-6 reacende debate sobre IA</li>
                     </ol>
                 </div>
-                <div class="newsletter-box">
-                    <h4>📬 RECEBA AS LAPADAS</h4>
-                    <p style="font-size:0.85rem;margin-bottom:8px;">As notícias mais bombásticas no seu e-mail, todo dia às 6h.</p>
-                    <input type="email" placeholder="Seu melhor e-mail" id="newsletterEmail">
-                    <button id="newsletterBtn">QUERO RECEBER!</button>
+                
+                <div class="social-box">
+                    <h4>📱 REDES SOCIAIS</h4>
+                    <p style="font-size:0.85rem;margin-bottom:16px;">Siga o repórter Serginho Lapada nas redes:</p>
+                    <div class="social-links">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/SEU_NUMERO" class="social-link" title="WhatsApp" target="_blank" rel="noopener" style="background: #25D366;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://youtube.com/@SEU_CANAL" class="social-link" title="YouTube" target="_blank" rel="noopener" style="background: #FF0000;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/SEU_PERFIL" class="social-link" title="Instagram" target="_blank" rel="noopener" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+
                 <div class="sidebar-card">
                     <h4>🗣️ FRASE DO DIA</h4>
                     <p style="font-style:italic;color:var(--text-secondary);font-size:0.9rem;">
-                        "A verdade é como uma lapada: dói, mas acorda."<br>
-                        <strong>— Serginho Lapada</strong>
+                        "Informação de qualidade é a base de uma sociedade livre."<br>
+                        <strong>— Lapada News</strong>
                     </p>
                 </div>
             </aside>
         </div>
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>💥 Lapada News</h4>
-                <p style="font-size:0.85rem;">O jornal que dá lapada na verdade desde 2024. Notícias com coragem, humor e aquele tempero que só o Serginho sabe dar.</p>
+                <p style="font-size:0.85rem;">Jornalismo independente, apuração rigorosa e compromisso com a verdade. As principais notícias do Brasil e do mundo.</p>
             </div>
             <div class="footer-col">
                 <h4>Editorias</h4>
@@ -1103,7 +998,7 @@
             <div class="footer-col">
                 <h4>Links</h4>
                 <ul>
-                    <li><a href="#">Quem é Serginho</a></li>
+                    <li><a href="#">Quem somos</a></li>
                     <li><a href="#">Contato</a></li>
                     <li><a href="#">Anuncie</a></li>
                     <li><a href="#">Privacidade</a></li>
@@ -1111,14 +1006,12 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Lapada News — Todos os direitos reservados. As notícias deste site são fictícias e têm propósito humorístico. Nenhuma lapada é dada de verdade.</p>
+            <p>© 2026 Lapada News — Todos os direitos reservados. As notícias deste site são apuradas com responsabilidade jornalística.</p>
         </div>
     </footer>
 
-    <!-- ==================== BACK TO TOP ==================== -->
     <button class="back-to-top" id="backToTop" title="Voltar ao topo" aria-label="Voltar ao topo">⬆</button>
 
-    <!-- ==================== MODAL ==================== -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-content">
             <button class="modal-close" id="modalClose">&times;</button>
@@ -1129,7 +1022,6 @@
 
     <script>
         (function() {
-            // ============ DOM ELEMENTS ============
             const btnDarkMode = document.getElementById('btnDarkMode');
             const btnSearch = document.getElementById('btnSearch');
             const searchDropdown = document.getElementById('searchDropdown');
@@ -1143,30 +1035,25 @@
             const modalTitle = document.getElementById('modalTitle');
             const modalBody = document.getElementById('modalBody');
             const heroReadBtn = document.getElementById('heroReadBtn');
-            const newsletterBtn = document.getElementById('newsletterBtn');
-            const newsletterEmail = document.getElementById('newsletterEmail');
             const body = document.body;
 
-            // ============ DARK MODE ============
+            // Dark mode
             const darkModePref = localStorage.getItem('lapada-dark-mode');
             if (darkModePref === 'true') {
                 body.classList.add('dark-mode');
                 btnDarkMode.textContent = '☀️';
             }
-
             btnDarkMode.addEventListener('click', () => {
                 const isDark = body.classList.toggle('dark-mode');
                 btnDarkMode.textContent = isDark ? '☀️' : '🌙';
                 localStorage.setItem('lapada-dark-mode', isDark);
             });
 
-            // ============ SEARCH DROPDOWN ============
+            // Search
             btnSearch.addEventListener('click', (e) => {
                 e.stopPropagation();
                 searchDropdown.classList.toggle('active');
-                if (searchDropdown.classList.contains('active')) {
-                    searchInput.focus();
-                }
+                if (searchDropdown.classList.contains('active')) searchInput.focus();
             });
             document.addEventListener('click', (e) => {
                 if (!searchDropdown.contains(e.target) && e.target !== btnSearch) {
@@ -1176,9 +1063,7 @@
             searchSubmit.addEventListener('click', () => {
                 const query = searchInput.value.trim();
                 if (query) {
-                    alert(
-                        `🔍 Buscando por: "${query}"\n\n(Em um site real, isso te levaria aos resultados. Aqui no Lapada News, a busca é tão rápida que dá lapada!)`
-                        );
+                    alert(`🔍 Buscando por: "${query}"\n\nRedirecionando para os resultados...`);
                     searchDropdown.classList.remove('active');
                     searchInput.value = '';
                 }
@@ -1187,7 +1072,7 @@
                 if (e.key === 'Enter') searchSubmit.click();
             });
 
-            // ============ MOBILE NAV ============
+            // Mobile nav
             hamburger.addEventListener('click', () => {
                 hamburger.classList.toggle('active');
                 mobileNav.classList.toggle('active');
@@ -1199,14 +1084,13 @@
                 });
             });
             document.addEventListener('click', (e) => {
-                if (!mobileNav.contains(e.target) && e.target !== hamburger && !hamburger.contains(e
-                        .target)) {
+                if (!mobileNav.contains(e.target) && e.target !== hamburger && !hamburger.contains(e.target)) {
                     hamburger.classList.remove('active');
                     mobileNav.classList.remove('active');
                 }
             });
 
-            // ============ BACK TO TOP ============
+            // Back to top
             window.addEventListener('scroll', () => {
                 backToTop.classList.toggle('visible', window.scrollY > 500);
             });
@@ -1214,14 +1098,13 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ============ MODAL ============
+            // Modal
             function openModal(title, bodyText) {
                 modalTitle.textContent = title;
                 modalBody.textContent = bodyText;
                 modalOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
             }
-
             function closeModal() {
                 modalOverlay.classList.remove('active');
                 document.body.style.overflow = '';
@@ -1234,109 +1117,44 @@
                 if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
             });
 
-            // ============ HERO READ BTN ============
+            // Hero button
             heroReadBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                openModal(
-                    'EXCLUSIVO: Serginho Lapada revela bastidores',
-                    '🔥 "A verdade que ninguém te conta" — Por Serginho Lapada\n\n' +
-                    'Em uma entrevista explosiva concedida ao nosso próprio portal, o repórter Serginho Lapada — ' +
-                    'conhecido por suas reportagens contundentes e seu estilo inconfundível — abriu o jogo sobre ' +
-                    'os bastidores da imprensa brasileira.\n\n' +
-                    '"Tem muito jornalista por aí que passa pano para político. Eu não. Eu dou é lapada.", ' +
-                    'declarou Serginho, enquanto tomava seu café sem açúcar.\n\n' +
-                    'Segundo ele, há esquemas que vão desde a compra de pautas até a combinação de manchetes ' +
-                    'para favorecer certos grupos. "A verdade dói, mas é meu dever contá-la. E eu conto com gosto.", ' +
-                    'finalizou o repórter, que já está preparando uma nova série de reportagens investigativas.\n\n' +
-                    'Fique ligado no Lapada News para mais informações. E lembre-se: aqui a notícia bate forte.'
-                );
+                const title = "Ministério da Saúde suspende temporariamente vacina contra dengue do Butantan após investigação de reações adversas";
+                const bodyText = "O Ministério da Saúde anunciou na segunda-feira (8) a suspensão temporária da vacinação com a Butantan-DV, vacina contra a dengue desenvolvida pelo Instituto Butantan, após o registro de 42 casos de reações adversas graves e duas mortes entre cerca de 500 mil pessoas imunizadas desde janeiro de 2026.\n\n" +
+                    "A relação entre os casos e o imunizante ainda não foi confirmada e está sob investigação. Especialistas destacam que eventos raros podem não ser identificados durante os estudos clínicos, mesmo em pesquisas amplas. Antes da aprovação pela Anvisa, a vacina foi testada em mais de 16 mil voluntários ao longo de cinco anos, demonstrando eficácia de até 80,5% contra formas graves da doença e sem registro de efeitos graves relacionados ao imunizante.\n\n" +
+                    "Segundo o Ministério da Saúde, a suspensão é uma medida preventiva e faz parte do processo de farmacovigilância, responsável por monitorar a segurança das vacinas após sua aplicação em larga escala. O Instituto Butantan afirmou que continuará colaborando com as autoridades sanitárias para esclarecer os casos e avaliar a possibilidade de retomada da vacinação.";
+                openModal(title, bodyText);
             });
 
-            // ============ NEWS CARDS CLICK ============
+            // News cards (mantendo o clique direto para abrir modal)
             document.querySelectorAll('.news-card').forEach(card => {
                 card.addEventListener('click', () => {
-                    const title = card.getAttribute('data-title') || card.querySelector('h3')
-                        .textContent;
+                    const title = card.getAttribute('data-title') || card.querySelector('h3').textContent;
                     const category = card.getAttribute('data-category') || 'Geral';
                     const snippet = card.querySelector('p')?.textContent || '';
-                    openModal(
-                        title,
-                        `📌 Categoria: ${category}\n\n${snippet}\n\n` +
-                        '✍️ Reportagem completa por Serginho Lapada.\n\n' +
-                        '🔎 Esta é uma notícia fictícia do universo Lapada News. Nenhum fato real foi ferido ' +
-                        'durante a produção deste conteúdo. Mas a lapada na curiosidade é garantida!\n\n' +
-                        '💬 Deixe seu comentário (em breve) e compartilhe essa notícia com seus amigos. ' +
-                        'Afinal, notícia boa é notícia compartilhada — ainda mais quando tem lapada!'
-                    );
+                    const fullText = `📌 Categoria: ${category}\n\n${snippet}\n\n` +
+                        "✍️ Reportagem completa por Lapada News.\n\n" +
+                        "🔎 Acompanhe as atualizações em tempo real e compartilhe esta notícia.";
+                    openModal(title, fullText);
                 });
             });
 
-            // ============ SIDEBAR LIST CLICK ============
-            document.querySelectorAll('.sidebar-list li').forEach(item => {
+            // Sidebar "Mais Lidas" -> abre o modal da notícia correspondente
+            document.querySelectorAll('#maisLidas li').forEach(item => {
                 item.addEventListener('click', () => {
-                    const text = item.textContent.replace(/^\d+\s*/, '').trim();
-                    openModal(
-                        text,
-                        `📰 ${text}\n\n` +
-                        'Esta é uma das notícias mais lidas do Lapada News. O sucesso estrondoso ' +
-                        'desta matéria prova que o público brasileiro adora uma boa história — ' +
-                        'especialmente quando vem com a marca registrada de Serginho Lapada.\n\n' +
-                        '✨ Continue navegando e descubra mais conteúdos bombásticos!'
-                    );
-                });
-            });
-
-            // ============ NEWSLETTER ============
-            newsletterBtn.addEventListener('click', () => {
-                const email = newsletterEmail.value.trim();
-                if (!email || !email.includes('@') || !email.includes('.')) {
-                    alert('📧 Opa! Digite um e-mail válido para receber as lapadas no conforto da sua caixa de entrada!');
-                    newsletterEmail.focus();
-                    return;
-                }
-                alert(
-                    `✅ INSCRITO COM SUCESSO!\n\n${email}\n\nAgora você receberá as notícias mais bombásticas do Lapada News todo dia às 6h da manhã. Prepare-se para acordar com lapada! 🔥`
-                );
-                newsletterEmail.value = '';
-            });
-            newsletterEmail.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') newsletterBtn.click();
-            });
-
-            // ============ ACTIVE NAV LINK ON SCROLL ============
-            const navLinksAll = document.querySelectorAll('.nav-links a, .mobile-nav a');
-            const sections = document.querySelectorAll('[id]');
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const top = section.offsetTop - 120;
-                    if (window.scrollY >= top) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                navLinksAll.forEach(link => {
-                    link.classList.remove('active');
-                    const href = link.getAttribute('href')?.replace('#', '');
-                    if (href === current || (current === '' && href === '#')) {
-                        link.classList.add('active');
+                    const ref = item.getAttribute('data-ref');
+                    if (ref) {
+                        const card = document.querySelector(`.news-card[data-sidebar-ref="${ref}"]`);
+                        if (card) {
+                            card.click(); // dispara o clique na notícia real
+                        }
                     }
                 });
             });
 
-            // ============ STICKY HEADER SHADOW ON SCROLL ============
-            const mainHeader = document.getElementById('mainHeader');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 10) {
-                    mainHeader.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
-                } else {
-                    mainHeader.style.boxShadow = 'var(--shadow)';
-                }
-            });
-
-            // ============ INIT ============
-            console.log('💥 Lapada News carregado com sucesso!');
-            console.log('📰 "A verdade é como uma lapada: dói, mas acorda." — Serginho Lapada');
-            console.log('👋 Obrigado por visitar o portal de notícias mais bombástico do Brasil!');
+            // Atualização dos links de redes sociais (substitua os # pelos links reais)
+            // Os ícones já estão com href="#" e target="_blank", basta o repórter editar.
         })();
     </script>
 </body>
