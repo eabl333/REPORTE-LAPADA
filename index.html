@@ -28,7 +28,7 @@
             --header-height: 64px;
             --ticker-height: 38px;
         }
-        
+
         .dark-mode {
             --bg: #0e0e0e;
             --surface: #1c1c1e;
@@ -39,6 +39,7 @@
             --shadow: 0 1px 6px rgba(0,0,0,0.5), 0 2px 12px rgba(0,0,0,0.4);
             --shadow-lg: 0 4px 24px rgba(0,0,0,0.6);
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -85,7 +86,7 @@
         .ticker-wrapper { overflow: hidden; flex: 1; }
         .ticker-track {
             display: flex;
-            animation: ticker-scroll 3000ms linear infinite;
+            animation: ticker-scroll 20s linear infinite;
             white-space: nowrap;
             gap: 60px;
             padding: 0 24px;
@@ -117,7 +118,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 20px;
+            padding: 0 16px;
             gap: 16px;
         }
         .logo-group {
@@ -264,8 +265,10 @@
             transform: translateY(-110%);
             transition: transform var(--transition);
         }
-        .mobile-nav.visible { display: flex; }
-        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav.open {
+            display: flex;
+            transform: translateY(0);
+        }
         .mobile-nav a {
             display: block;
             padding: 11px 16px;
@@ -278,7 +281,7 @@
         .mobile-nav a:hover { background: var(--accent); color: #fff; }
 
         /* LAYOUT */
-        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 16px; }
 
         /* HERO */
         .hero-section {
@@ -349,6 +352,7 @@
             font-weight: 900;
             line-height: 1.25;
             color: var(--text);
+            word-break: break-word;
         }
         .hero-content p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
         .hero-meta {
@@ -404,7 +408,7 @@
         /* CARDS */
         .news-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 14px;
             margin-bottom: 8px;
         }
@@ -456,6 +460,7 @@
             font-weight: 700;
             line-height: 1.35;
             color: var(--text);
+            word-break: break-word;
         }
         .card-body p {
             font-size: 0.78rem;
@@ -479,7 +484,12 @@
         }
 
         /* TWO COL */
-        .two-col { display: grid; grid-template-columns: 1fr 300px; gap: 24px; margin-bottom: 28px; }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 24px;
+            margin-bottom: 28px;
+        }
         .sidebar { display: flex; flex-direction: column; gap: 16px; }
         .sidebar-card {
             background: var(--surface);
@@ -549,7 +559,7 @@
         .site-footer {
             background: #111;
             color: #999;
-            padding: 36px 20px 16px;
+            padding: 36px 16px 16px;
             margin-top: 36px;
             border-top: 3px solid var(--accent);
         }
@@ -676,6 +686,7 @@
             font-weight: 900;
             color: var(--text);
             line-height: 1.3;
+            word-break: break-word;
         }
         .modal-body {
             color: var(--text-secondary);
@@ -685,69 +696,121 @@
         }
         .modal-body p { margin-bottom: 12px; }
 
-        /* RESPONSIVE */
+        /* ============================================================
+           RESPONSIVE — NOTEBOOK (960px–1279px)
+           ============================================================ */
+        @media (max-width: 1279px) and (min-width: 961px) {
+            :root { --max-width: 100%; }
+            .two-col { grid-template-columns: 1fr 260px; gap: 18px; }
+            .hero-content { padding: 22px 26px; }
+            .hero-content h2 { font-size: 1.35rem; }
+            .news-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+        }
+
+        /* ============================================================
+           RESPONSIVE — TABLET (601px–960px)
+           ============================================================ */
         @media (max-width: 960px) {
-            .hero-section { grid-template-columns: 1fr; min-height: auto; }
-            .hero-image { min-height: 180px; }
+            .hero-section {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+            .hero-image { min-height: 200px; }
             .hero-content { padding: 22px 24px; }
             .hero-content h2 { font-size: 1.3rem; }
             .two-col { grid-template-columns: 1fr; }
+            .sidebar {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 14px;
+            }
             .nav-links { display: none; }
             .hamburger { display: flex; }
+            .news-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
         }
-        @media (max-width: 520px) {
-            .hero-content h2 { font-size: 1.15rem; }
-            .news-grid { grid-template-columns: 1fr; gap: 10px; }
+
+        /* ============================================================
+           RESPONSIVE — MOBILE (≤600px)
+           ============================================================ */
+        @media (max-width: 600px) {
+            :root {
+                --header-height: 56px;
+                --ticker-height: 34px;
+            }
+
+            /* ticker menor no mobile */
+            .ticker-label {
+                padding: 0 10px;
+                font-size: 0.65rem;
+                letter-spacing: 0.8px;
+            }
+            .ticker-track span { font-size: 0.78rem; }
+
+            /* logo compacto */
             .logo-text h1 { font-size: 1.05rem; }
-            :root { --header-height: 56px; }
-            .modal-content { padding: 20px; }
+            .logo-text span { display: none; }
+            .logo-icon { width: 32px; height: 32px; font-size: 1rem; }
+
+            /* busca full-width no mobile */
+            .search-dropdown {
+                right: -60px;
+                min-width: calc(100vw - 32px);
+            }
+
+            /* hero empilhado */
+            .hero-section { margin: 12px auto; border-radius: 10px; }
+            .hero-image { min-height: 160px; }
+            .hero-image .pulse-circle { width: 80px; height: 80px; font-size: 2rem; }
+            .hero-content { padding: 16px; gap: 10px; }
+            .hero-content h2 { font-size: 1.1rem; }
+            .hero-content p { font-size: 0.83rem; }
+            .hero-meta { gap: 8px; font-size: 0.7rem; }
+            .btn-read { padding: 10px 18px; font-size: 0.82rem; width: 100%; justify-content: center; }
+
+            /* seções */
+            .section-title { font-size: 1.05rem; margin: 20px 0 10px; }
+
+            /* cards em coluna única */
+            .news-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .card-image { height: 130px; }
+            .card-body { padding: 12px 14px; }
+            .card-body h3 { font-size: 0.9rem; }
+
+            /* sidebar empilhada */
+            .sidebar { display: flex; flex-direction: column; }
+            .sidebar-card { padding: 14px; }
+
+            /* modal adaptado */
+            .modal-overlay { padding: 12px; }
+            .modal-content {
+                max-height: 88vh;
+                padding: 18px 16px;
+                border-radius: 12px;
+            }
+            .modal-content h3 { font-size: 1.1rem; }
+            .modal-body { font-size: 0.85rem; }
+
+            /* back-to-top menor */
+            .back-to-top { bottom: 16px; right: 16px; width: 38px; height: 38px; font-size: 0.9rem; }
+
+            /* footer */
+            .site-footer { padding: 24px 16px 12px; margin-top: 24px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
         }
 
-        .two-col {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 24px;
-    margin-bottom: 28px;
-}
-@media (max-width: 960px) {
-    .two-col {
-        grid-template-columns: 1fr;
-    }
-}
-
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 14px;
-    margin-bottom: 8px;
-}
-
-img, svg, iframe, .card-image, .hero-image {
-    max-width: 100%;
-    height: auto;
-}
-
-body {
-    overflow-x: hidden;
-}
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 16px;  /* reduzido para dar mais espaço em telas pequenas */
-}
-
-@media (max-width: 520px) {
-    .modal-content {
-        max-height: 85vh;
-        padding: 20px;
-        margin: 0 10px;
-        border-radius: var(--radius);
-    }
-}
-
-.hero-content h2, .card-body h3 {
-    word-break: break-word;
-}
+        /* ============================================================
+           RESPONSIVE — MOBILE PEQUENO (≤380px)
+           ============================================================ */
+        @media (max-width: 380px) {
+            .logo-text h1 { font-size: 0.95rem; }
+            .hero-content h2 { font-size: 1rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .header-actions { gap: 4px; }
+            .btn-icon { width: 32px; height: 32px; font-size: 0.9rem; }
+        }
     </style>
 </head>
 <body>
@@ -802,16 +865,15 @@ body {
                 </button>
             </div>
         </div>
+        <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+            <a href="#" onclick="closeMobileNav()">🏠 Home</a>
+            <a href="#politica" onclick="closeMobileNav()">🏛️ Política</a>
+            <a href="#esportes" onclick="closeMobileNav()">⚽ Esportes</a>
+            <a href="#entretenimento" onclick="closeMobileNav()">🎬 Entretenimento</a>
+            <a href="#tecnologia" onclick="closeMobileNav()">📱 Tecnologia</a>
+            <a href="#policial" onclick="closeMobileNav()">🚔 Policial</a>
+        </nav>
     </header>
-
-    <nav class="mobile-nav visible" id="mobileNav" aria-label="Menu mobile">
-        <a href="#" onclick="closeMobileNav()">🏠 Home</a>
-        <a href="#politica" onclick="closeMobileNav()">🏛️ Política</a>
-        <a href="#esportes" onclick="closeMobileNav()">⚽ Esportes</a>
-        <a href="#entretenimento" onclick="closeMobileNav()">🎬 Entretenimento</a>
-        <a href="#tecnologia" onclick="closeMobileNav()">📱 Tecnologia</a>
-        <a href="#policial" onclick="closeMobileNav()">🚔 Policial</a>
-    </nav>
 
     <main class="container">
         <section class="hero-section" id="hero">
@@ -1021,7 +1083,6 @@ body {
 
     <script>
     (function () {
-        // ─── DARK MODE ───────────────────────────────────────────────
         const btnDarkMode = document.getElementById('btnDarkMode');
         if (localStorage.getItem('lapada-dark') === 'true') {
             document.body.classList.add('dark-mode');
@@ -1033,7 +1094,6 @@ body {
             localStorage.setItem('lapada-dark', isDark);
         });
 
-        // ─── SEARCH ──────────────────────────────────────────────────
         const btnSearch = document.getElementById('btnSearch');
         const searchDropdown = document.getElementById('searchDropdown');
         const searchInput = document.getElementById('searchInput');
@@ -1059,7 +1119,6 @@ body {
         });
         searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') searchSubmit.click(); });
 
-        // ─── MOBILE NAV ──────────────────────────────────────────────
         const hamburger = document.getElementById('hamburger');
         const mobileNav = document.getElementById('mobileNav');
 
@@ -1087,14 +1146,12 @@ body {
             mobileNav.classList.remove('open');
         };
 
-        // ─── BACK TO TOP ─────────────────────────────────────────────
         const backToTop = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
             backToTop.classList.toggle('visible', window.scrollY > 400);
         });
         backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-        // ─── MODAL ───────────────────────────────────────────────────
         const modalOverlay = document.getElementById('modalOverlay');
         const modalClose   = document.getElementById('modalClose');
         const modalTitle   = document.getElementById('modalTitle');
@@ -1104,7 +1161,6 @@ body {
         function openModal(title, bodyText, category) {
             modalTitle.textContent = title;
             modalTag.textContent = category || 'Notícia';
-            // Convert plain paragraphs (separated by \n\n) into <p> elements
             const paragraphs = bodyText.split('\n\n').filter(p => p.trim());
             modalBody.innerHTML = paragraphs.map(p => '<p>' + p + '</p>').join('');
             modalOverlay.classList.add('active');
@@ -1124,7 +1180,6 @@ body {
             if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
         });
 
-        // ─── HERO BUTTON ─────────────────────────────────────────────
         document.getElementById('heroReadBtn').addEventListener('click', () => {
             openModal(
                 'Ministério da Saúde suspende temporariamente vacina contra dengue do Butantan',
@@ -1133,7 +1188,6 @@ body {
             );
         });
 
-        // ─── NEWS CARDS ──────────────────────────────────────────────
         document.querySelectorAll('.news-card').forEach(card => {
             card.addEventListener('click', () => {
                 const title    = card.getAttribute('data-title') || card.querySelector('h3').textContent;
@@ -1147,7 +1201,6 @@ body {
             });
         });
 
-        // ─── SIDEBAR MAIS LIDAS ──────────────────────────────────────
         document.querySelectorAll('#maisLidas li').forEach(item => {
             item.addEventListener('click', () => {
                 const ref = item.getAttribute('data-ref');
@@ -1158,7 +1211,6 @@ body {
             });
         });
 
-        // ─── RELATIVE TIMES ──────────────────────────────────────────
         function formatTime(min) {
             if (min < 1)    return 'Agora mesmo';
             if (min < 60)   return 'Há ' + Math.floor(min) + ' min';
